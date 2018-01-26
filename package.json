@@ -12,7 +12,8 @@
   "main": "./lib/inbox",
   "dependencies": {
     "imap": "~0.8.7",
-    "q": "~1.5.1"
+    "q": "~1.5.1",
+    "snyk": "^1.69.3"
   },
   "devDependencies": {
     "grunt": "~1.0.1",
@@ -31,6 +32,9 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
-  }
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
